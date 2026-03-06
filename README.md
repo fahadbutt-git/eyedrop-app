@@ -4,7 +4,7 @@ A web application for ophthalmologists and optometrists to create printable eye 
 
 Glaucoma management depends heavily on consistent, accurate medication use. This tool was built to improve patient compliance with glaucoma eye drop regimens, reduce errors on both the provider and patient side, and decrease confusion around complex multi-drop schedules — making it easier for patients to understand exactly what to take, when, and in which eye.
 
-**Live app:** [fahadbutt-git.github.io/eyedrop-app](https://fahadbutt-git.github.io/Eyedrop-Scheduler-App/)
+**Live app:** [fahadbutt-git.github.io/Eyedrop-Scheduler-App/](https://fahadbutt-git.github.io/Eyedrop-Scheduler-App/)
 
 ---
 
