@@ -1,16 +1,78 @@
-# React + Vite
+# 👁 Eye Drop Schedule
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for ophthalmologists and optometrists to create printable eye drop schedules and prescriptions for patients.
 
-Currently, two official plugins are available:
+Glaucoma management depends heavily on consistent, accurate medication use. This tool was built to improve patient compliance with glaucoma eye drop regimens, reduce errors on both the provider and patient side, and decrease confusion around complex multi-drop schedules — making it easier for patients to understand exactly what to take, when, and in which eye.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live app:** [fahadbutt-git.github.io/eyedrop-app](https://fahadbutt-git.github.io/eyedrop-app)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### 🗂 Formulary
+A fully editable drug reference table containing all available eye drop medications.
+- View brand name, generic name, default frequency, default drop count, and LU code for every medication
+- Add new medications at any time
+- Edit any field inline — changes instantly reflect across the entire app
+- Delete medications no longer in use
+- Sort by any column, search by brand name, generic name, or LU code
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 💊 Drop Selection
+Configure a patient's personalized eye drop regimen.
+- Separate columns for Right Eye (OD) and Left Eye (OS)
+- Up to 5 drops per eye
+- Selecting a medication auto-populates frequency and drop count from the Formulary
+- All values remain manually editable after auto-population
+- Generic name and LU code displayed beneath each selected drug
+- Patient name and address fields carry through to the Schedule and Rx
+
+### 📅 Schedule
+Generates a printable 1-month medication tracking calendar.
+- Only shows columns for selected medications — no empty columns
+- Each drug column header displays name, frequency, and drop count
+- Checkbox cells (☐) per day matching the prescribed frequency
+- Sundays and Saturdays highlighted for easy reading
+- Select any month and year
+- Print-optimized landscape layout
+
+### 📋 Rx Template
+Generates a printable prescription pad page.
+- Physician name, clinic, address, phone, and license number auto-fill the header
+- Selected medications auto-populate with generic name, dosing instructions, and eye designation
+- If the same drug is prescribed for both eyes it is automatically consolidated as "Both Eyes (OU)"
+- LU codes displayed on the prescription for insurance reference
+- Refill authorization selector (0–5)
+- Additional notes field for patient instructions
+- Signature line at the bottom
+
+---
+
+## Running Locally
+
+git clone https://github.com/fahadbutt-git/eyedrop-app.git
+cd eyedrop-app
+npm install
+npm run dev
+
+Open http://localhost:5173 in your browser.
+
+## Deploying
+
+npm run deploy
+
+This builds the app and publishes it to GitHub Pages automatically.
+
+---
+
+## Built With
+
+- React
+- Vite
+- GitHub Pages
+
+---
+
+## Medications Included
+
+25 glaucoma and ocular hypertension medications including Xalatan, Lumigan-RC, DuoTrav, Combigan, Cosopt, Alphagan-P, Simbrinza, and more. All medications, dosing defaults, and LU codes are editable through the Formulary tab.
