@@ -709,10 +709,7 @@ export default function App() {
                 letterSpacing: "-0.3px",
               }}
             >
-              Eye Drop Scheduler
-            </div>
-            <div style={{ fontSize: 11, color: "#90cdf4", marginTop: 1 }}>
-              Patient Medication Tracker
+              Eye Drop Calendar
             </div>
           </div>
         </div>
