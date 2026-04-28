@@ -347,12 +347,17 @@ const MONTH_NAMES = [
 ];
 
 function useIsMobile() {
-  const [mobile, setMobile] = useState(window.innerWidth <= 640);
+  const [mobile, setMobile] = useState(false); // Start with a safe default
+
   useEffect(() => {
+    // This only runs in the browser, where 'window' exists
+    setMobile(window.innerWidth <= 640);
+
     const h = () => setMobile(window.innerWidth <= 640);
     window.addEventListener("resize", h);
     return () => window.removeEventListener("resize", h);
   }, []);
+
   return mobile;
 }
 
