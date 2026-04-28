@@ -578,7 +578,7 @@ export default function App() {
   // ── Print ──
   const handlePrint = () => {
     const win = window.open("", "_blank");
-    win.document.write(`<html><head><title>Eye Drop Schedule</title><style>
+    win.document.write(`<html><head><title>Eye Drop Tracker</title><style>
       *{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;font-size:9px;color:#1a202c}
       .print-wrap{padding:12px}table{width:100%;border-collapse:collapse}
       th{background:#1a365d;color:#fff;padding:4px 5px;font-size:8px;text-align:center;border:1px solid #2d3748}
@@ -714,7 +714,7 @@ export default function App() {
                 letterSpacing: "-0.3px",
               }}
             >
-              Eye Drop Calendar
+              Eye Drop Tracker
             </div>
           </div>
         </div>
@@ -1777,7 +1777,7 @@ export default function App() {
                   >
                     <div>
                       <div style={{ fontSize: 17, fontWeight: 700 }}>
-                        {patientName && `${patientName} — `}Eye Drop Schedule
+                        {patientName && `${patientName} — `}Eye Drop Tracker
                       </div>
                       <div
                         style={{ fontSize: 12, color: "#90cdf4", marginTop: 2 }}
